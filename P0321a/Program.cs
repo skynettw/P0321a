@@ -40,13 +40,9 @@ namespace P0321a
             Console.WriteLine($"{n}!={total}");
         }
 
-        static void Practice3()
+        
+        static bool CheckPrime(int n)
         {
-            // 讓使用者輸入 n (n>1)，判斷n是否為質數 
-
-            int n;         //使用者輸入的 n
-            Console.Write("n=");
-            n = Convert.ToInt32(Console.ReadLine());
             bool isPrime = true;
             for (int i = 2; i <= n / 2; i++)
             {
@@ -56,6 +52,17 @@ namespace P0321a
                     break;
                 }
             }
+            return isPrime;
+        }
+        
+        static void Practice3()
+        {
+            // 讓使用者輸入 n (n>1)，判斷n是否為質數 
+
+            int n;         //使用者輸入的 n
+            Console.Write("n=");
+            n = Convert.ToInt32(Console.ReadLine());
+            
             if (isPrime)
             {
                 Console.WriteLine($"{n}是質數！");
