@@ -63,7 +63,7 @@ namespace P0321a
             Console.Write("n=");
             n = Convert.ToInt32(Console.ReadLine());
             
-            if (isPrime)
+            if (CheckPrime(n))
             {
                 Console.WriteLine($"{n}是質數！");
             }
@@ -73,9 +73,32 @@ namespace P0321a
             }
 
         }
+
+        static void Practice4()
+        {
+            // 讓使用者輸入 n1, n2
+            // 列出n1到n2之間的所有質數
+
+            int n1, n2;         //使用者輸入的 n1, n2
+            Console.Write("n1=");
+            n1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("n2=");
+            n2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("以下是所有我找到的質數");
+            for(int n=n1; n<=n2; n++)
+            {
+                if (CheckPrime(n))
+                {
+                    Console.Write($"{n},");
+                }
+            }
+            Console.WriteLine();
+            
+
+        }
         static void Main(string[] args)
         {
-            Practice3();
+            Practice4();
             Console.ReadLine();
         }
     }
